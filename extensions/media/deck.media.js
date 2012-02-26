@@ -15,7 +15,7 @@
 
 	$d.bind("deck.change", function(e, from, to) {
 		// Don't run if within a presenter iframe
-		if (!$d.find("body").hasClass("deck-presenter-iframe")) {
+		if ($d.find("body").hasClass("deck-presenter-iframe")) {
 			return;
 		}
 
