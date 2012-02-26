@@ -5,6 +5,31 @@ body {
 	position: relative;
 }
 
+#select-slides {
+
+}
+
+	#file-slides {
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		border: 5px dashed #999;
+		color: #999;
+		font-size: 30px;
+		margin: 20px 0;
+		padding: 50px;
+		text-align: center;
+	}
+
+		#file-slides.drag-over {
+			border-color: #666;
+			color: #666;
+		}
+
+#presenter {
+	display: none;
+}
+
 h2 {
 	background: #666;
 	color: #fff;
