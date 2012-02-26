@@ -1,0 +1,386 @@
+// Compass
+@import "compass";
+@import "compass/typography/lists/horizontal-list";
+@import "compass/utilities";
+
+// CSS3
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/font-face";
+@import "compass/css3/images";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+
+// Colours
+
+// Typography
+
+@include font-face("TitilliumText Thin", font-files("titilliumtext25l005-webfont.woff", woff, "titilliumtext25l005-webfont.ttf", truetype, "titilliumtext25l005-webfont.svg", svg), "titilliumtext25l005-webfont.eot");
+@include font-face("TitilliumText Light", font-files("titilliumtext25l004-webfont.woff", woff, "titilliumtext25l004-webfont.ttf", truetype, "titilliumtext25l004-webfont.svg", svg), "titilliumtext25l004-webfont.eot");
+@include font-face("TitilliumText Regular", font-files("titilliumtext25l003-webfont.woff", woff, "titilliumtext25l003-webfont.ttf", truetype, "titilliumtext25l003-webfont.svg", svg), "titilliumtext25l003-webfont.eot");
+@include font-face("TitilliumText Medium", font-files("titilliumtext25l002-webfont.woff", woff, "titilliumtext25l002-webfont.ttf", truetype, "titilliumtext25l002-webfont.svg", svg), "titilliumtext25l002-webfont.eot");
+@include font-face("TitilliumText Bold", font-files("titilliumtext25l001-webfont.woff", woff, "titilliumtext25l001-webfont.ttf", truetype, "titilliumtext25l001-webfont.svg", svg), "titilliumtext25l001-webfont.eot");
+@include font-face("TitilliumText XBold", font-files("titilliumtext25l-webfont.woff", woff, "titilliumtext25l-webfont.ttf", truetype, "titilliumtext25l-webfont.svg", svg), "titilliumtext25l-webfont.eot");
+
+html {
+	overflow: hidden;
+}
+
+body {
+	background: #000;
+	@include background-image(linear-gradient(#333333, #191919));
+	height: 100%;
+	margin: 0;
+	width: 100%;
+}
+
+.deck-container {
+	@include transform-origin(50%, 0%);
+	color: #fff;
+	font-family: "TitilliumText Thin", "Helvetica Neue", "Helvetica", "Verdana", "Arial", sans-serif;
+	font-size: 30px;
+	font-weight: normal;
+	height: 768px;
+	left: 50%;
+	line-height: 1em;
+	margin: 0 0 0 -512px;
+	overflow: visible;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 1024px;
+
+	.slide {
+		@include transform-origin(50%, 50%);
+		@include rotate(-30deg);
+		box-sizing: border-box;
+		left: 0;
+		margin: 0 !important;
+		padding: 0 !important;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+		// Typography
+		h1, h2, h3, h4, h5 {
+			border: none;
+			font-family: "TitilliumText Light";
+			font-weight: normal;
+			letter-spacing: -1px;
+			line-height: 1em;
+			text-align: left;
+
+			.csstransforms & {
+				@include transform(none);
+				left:0;
+				padding: 0;
+				position: static;
+				right:0;
+				top:50%;
+			}
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+		// Presenter notes
+		.notes {
+			display: none;
+		}
+
+		// Icons
+		.icon {
+			@include opacity(0.2);
+			left: 50%;
+			height: 256px;
+			margin: -128px 0 0 -128px;
+			position: absolute;
+			top: 210px;
+			width: 256px;
+		}
+
+		// Title slide
+		&.title {
+			h1 {
+				background: rgb(255, 0, 128);
+				font-family: "TitilliumText XBold";
+				font-size: 100px;
+				margin: 230px -300px 0 80px;
+				padding: 20px 20px 20px 30px;
+				text-transform: uppercase;
+			}
+
+			h2 {
+				background: rgb(0, 186, 251);
+				font-family: "TitilliumText Light";
+				font-size: 60px;
+				margin: 30px 80px 0 -300px;
+				padding: 25px 30px 25px 25px;
+				text-align: right;
+			}
+
+			footer {
+				font-family: "TitilliumText Thin";
+				font-size: 36px;
+				margin: 30px 150px 0 0;
+				padding: 0;
+				text-align: right;
+			}
+		}
+
+		// Sub-title slide
+		&.sub-title {
+			h2 {
+				background: rgb(0, 186, 251);
+				font-family: "TitilliumText Thin";
+				font-size: 64px;
+				margin: 420px 180px 0 -300px;
+				padding: 25px 30px 25px 25px;
+				text-align: right;
+			}
+
+			h3 {
+				font-family: "TitilliumText Thin";
+				font-size: 36px;
+				letter-spacing: 0;
+				margin: 30px 205px 0 0;
+				text-align: right;
+			}
+		}
+
+		// Full media slide
+		&.full-media {
+			@include rotate(0deg);
+
+			h2 {
+				background: rgb(0, 186, 251);
+				font-family: "TitilliumText Thin";
+				font-size: 64px;
+				margin: 60px 250px 0 -300px;
+				padding: 25px 30px 25px 25px;
+				text-align: right;
+			}
+
+			img, video {
+				height: 100%;
+				left: 50%;
+				margin: -384px 0 0 -512px;
+				max-width: none;
+				position: absolute;
+				top: 50%;
+				width: 100%;
+				z-index: -10;
+			}
+		}
+
+		// Full icon slide
+		&.full-icon {
+			@include rotate(0deg);
+
+			.icon {
+				@include opacity(1);
+				height: 400px;
+				margin: -200px 0 0 -200px;
+				top: 50%;
+				width: 400px;
+
+				&.custom-width-620 {
+					height: 620px;
+					margin: -310px 0 0 -310px;
+					width: 620px;
+				}
+			}
+
+			&.blue {
+				background: rgb(0, 186, 251);
+			}
+
+			&.green {
+				background: rgb(97, 203, 66);
+			}
+
+			&.pink {
+				background: rgb(255, 0, 128);
+			}
+
+			&.orange {
+				background: rgb(255, 165, 44);
+			}
+		}
+
+		// Personal info slide
+		&.personal-info {
+			@include rotate(0deg);
+
+			header {
+				background: rgb(0, 186, 251);
+				margin: 60px 250px 0 -300px;
+				padding: 20px 132px 20px 460px;
+				position: relative;
+
+				h2 {
+					font-family: "TitilliumText Thin";
+					font-size: 64px;
+					margin: 0;
+					text-align: left;
+				}
+
+				p {
+					font-family: "TitilliumText Thin";
+					font-size: 26px;
+					margin: 0;
+					text-align: left;
+				}
+
+				.avatar {
+					border: 6px solid rgb(60, 153, 206);
+					height: 80px;
+					margin: -46px 20px 0 0;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					width: 80px;
+				}
+			}
+
+			.recent-projects {
+				float: left;
+				width: 50%;
+
+				h3 {
+					border: solid rgb(179, 179, 179);
+					border-width: 1px 0;
+					color: rgb(179, 179, 179);
+					font-family: "TitilliumText Regular";
+					font-size: 24px;
+					letter-spacing: 0;
+					padding: 10px 0 10px 98px;
+					margin: 0 0 40px 60px;
+					text-transform: uppercase;
+				}
+
+				.project {
+					margin: 40px 20px 40px 60px;
+				}
+			}
+
+			.more-cool-stuff {
+				float: right;
+				width: 50%;
+
+				h3 {
+					border: solid rgb(179, 179, 179);
+					border-width: 1px 0;
+					color: rgb(179, 179, 179);
+					font-family: "TitilliumText Regular";
+					font-size: 24px;
+					letter-spacing: 0;
+					padding: 10px 0 10px 118px;
+					margin: 0 60px 40px 0;
+					text-transform: uppercase;
+				}
+
+				.project {
+					margin: 40px 60px 40px 20px;
+				}
+			}
+
+			.project {
+				margin: 40px 0;
+				padding: 0 0 0 98px;
+				position: relative;
+
+				h4, h5 {
+					letter-spacing: 0;
+					line-height: 1em;
+					font-family: "TitilliumText Light";
+				}
+
+				h4 span, h5 {
+					color: rgb(179, 179, 179);
+					font-family: "TitilliumText Thin";
+				}
+
+				h4 {
+					font-size: 24px;
+				}
+
+				h5 {
+					font-size: 20px;
+				}
+
+				.icon {
+					@include opacity(1);
+					left: 34px;
+					position: absolute;
+					top: 50%;
+
+					&.icon-twitter {
+						height: 41px;
+						margin: -20px 0 0 -30px;
+						width: 60px;
+					}
+
+					&.icon-rawkets {
+						height: 66px;
+						margin: -33px 0 0 -20px;
+						width: 40px;
+					}
+
+					&.icon-mozilla {
+						height: 49px;
+						margin: -25px 0 0 -30px;
+						width: 60px;
+					}
+
+					&.icon-exw {
+						height: 60px;
+						margin: -30px 0 0 -30px;
+						width: 60px;
+					}
+				}
+			}
+
+			.banner {
+				margin: 80px 60px;
+
+				.project {
+					h3, h4 {
+						letter-spacing: -1px;
+						line-height: 0.8em;
+						font-family: "TitilliumText Light";
+					}
+
+					h3 span, h4 {
+						color: rgb(179, 179, 179);
+						font-family: "TitilliumText Thin";
+					}
+
+					h3 {
+						font-size: 48px;
+					}
+
+					h4 {
+						font-size: 48px;
+					}
+
+					.icon {
+						@include opacity(1);
+						height: 80px;
+						left: 0;
+						margin: -40px 0 0 0;
+						position: absolute;
+						top: 50%;
+						width: 68px;
+					}
+				}
+			}
+		}
+	}
+}

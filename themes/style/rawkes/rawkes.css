@@ -1,0 +1,424 @@
+@font-face {
+  font-family: "TitilliumText Thin";
+  src: url('fonts/titilliumtext25l005-webfont.eot');
+  src: url('fonts/titilliumtext25l005-webfont.eot?iefix') format('eot'), url('fonts/titilliumtext25l005-webfont.woff') format('woff'), url('fonts/titilliumtext25l005-webfont.ttf') format('truetype'), url('fonts/titilliumtext25l005-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "TitilliumText Light";
+  src: url('fonts/titilliumtext25l004-webfont.eot');
+  src: url('fonts/titilliumtext25l004-webfont.eot?iefix') format('eot'), url('fonts/titilliumtext25l004-webfont.woff') format('woff'), url('fonts/titilliumtext25l004-webfont.ttf') format('truetype'), url('fonts/titilliumtext25l004-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "TitilliumText Regular";
+  src: url('fonts/titilliumtext25l003-webfont.eot');
+  src: url('fonts/titilliumtext25l003-webfont.eot?iefix') format('eot'), url('fonts/titilliumtext25l003-webfont.woff') format('woff'), url('fonts/titilliumtext25l003-webfont.ttf') format('truetype'), url('fonts/titilliumtext25l003-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "TitilliumText Medium";
+  src: url('fonts/titilliumtext25l002-webfont.eot');
+  src: url('fonts/titilliumtext25l002-webfont.eot?iefix') format('eot'), url('fonts/titilliumtext25l002-webfont.woff') format('woff'), url('fonts/titilliumtext25l002-webfont.ttf') format('truetype'), url('fonts/titilliumtext25l002-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "TitilliumText Bold";
+  src: url('fonts/titilliumtext25l001-webfont.eot');
+  src: url('fonts/titilliumtext25l001-webfont.eot?iefix') format('eot'), url('fonts/titilliumtext25l001-webfont.woff') format('woff'), url('fonts/titilliumtext25l001-webfont.ttf') format('truetype'), url('fonts/titilliumtext25l001-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "TitilliumText XBold";
+  src: url('fonts/titilliumtext25l-webfont.eot');
+  src: url('fonts/titilliumtext25l-webfont.eot?iefix') format('eot'), url('fonts/titilliumtext25l-webfont.woff') format('woff'), url('fonts/titilliumtext25l-webfont.ttf') format('truetype'), url('fonts/titilliumtext25l-webfont.svg') format('svg');
+}
+
+/* line 25, rawkes.scss */
+html {
+  overflow: hidden;
+}
+
+/* line 29, rawkes.scss */
+body {
+  background: #000;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #191919));
+  background-image: -webkit-linear-gradient(#333333, #191919);
+  background-image: -moz-linear-gradient(#333333, #191919);
+  background-image: -o-linear-gradient(#333333, #191919);
+  background-image: -ms-linear-gradient(#333333, #191919);
+  background-image: linear-gradient(#333333, #191919);
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+/* line 37, rawkes.scss */
+.deck-container {
+  -moz-transform-origin: 50% 0%;
+  -webkit-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  color: #fff;
+  font-family: "TitilliumText Thin", "Helvetica Neue", "Helvetica", "Verdana", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  height: 768px;
+  left: 50%;
+  line-height: 1em;
+  margin: 0 0 0 -512px;
+  overflow: visible;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 1024px;
+}
+/* line 53, rawkes.scss */
+.deck-container .slide {
+  -moz-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -moz-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  box-sizing: border-box;
+  left: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 65, rawkes.scss */
+.deck-container .slide h1, .deck-container .slide h2, .deck-container .slide h3, .deck-container .slide h4, .deck-container .slide h5 {
+  border: none;
+  font-family: "TitilliumText Light";
+  font-weight: normal;
+  letter-spacing: -1px;
+  line-height: 1em;
+  text-align: left;
+}
+/* line 73, rawkes.scss */
+.csstransforms .deck-container .slide h1, .csstransforms .deck-container .slide h2, .csstransforms .deck-container .slide h3, .csstransforms .deck-container .slide h4, .csstransforms .deck-container .slide h5 {
+  -moz-transform: none;
+  -webkit-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+  left: 0;
+  padding: 0;
+  position: static;
+  right: 0;
+  top: 50%;
+}
+/* line 83, rawkes.scss */
+.deck-container .slide a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 88, rawkes.scss */
+.deck-container .slide a:hover {
+  text-decoration: underline;
+}
+/* line 93, rawkes.scss */
+.deck-container .slide .notes {
+  display: none;
+}
+/* line 98, rawkes.scss */
+.deck-container .slide .icon {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2;
+  left: 50%;
+  height: 256px;
+  margin: -128px 0 0 -128px;
+  position: absolute;
+  top: 210px;
+  width: 256px;
+}
+/* line 110, rawkes.scss */
+.deck-container .slide.title h1 {
+  background: #ff0080;
+  font-family: "TitilliumText XBold";
+  font-size: 100px;
+  margin: 230px -300px 0 80px;
+  padding: 20px 20px 20px 30px;
+  text-transform: uppercase;
+}
+/* line 119, rawkes.scss */
+.deck-container .slide.title h2 {
+  background: #00bafb;
+  font-family: "TitilliumText Light";
+  font-size: 60px;
+  margin: 30px 80px 0 -300px;
+  padding: 25px 30px 25px 25px;
+  text-align: right;
+}
+/* line 128, rawkes.scss */
+.deck-container .slide.title footer {
+  font-family: "TitilliumText Thin";
+  font-size: 36px;
+  margin: 30px 150px 0 0;
+  padding: 0;
+  text-align: right;
+}
+/* line 139, rawkes.scss */
+.deck-container .slide.sub-title h2 {
+  background: #00bafb;
+  font-family: "TitilliumText Thin";
+  font-size: 64px;
+  margin: 420px 180px 0 -300px;
+  padding: 25px 30px 25px 25px;
+  text-align: right;
+}
+/* line 148, rawkes.scss */
+.deck-container .slide.sub-title h3 {
+  font-family: "TitilliumText Thin";
+  font-size: 36px;
+  letter-spacing: 0;
+  margin: 30px 205px 0 0;
+  text-align: right;
+}
+/* line 158, rawkes.scss */
+.deck-container .slide.full-media {
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+/* line 161, rawkes.scss */
+.deck-container .slide.full-media h2 {
+  background: #00bafb;
+  font-family: "TitilliumText Thin";
+  font-size: 64px;
+  margin: 60px 250px 0 -300px;
+  padding: 25px 30px 25px 25px;
+  text-align: right;
+}
+/* line 170, rawkes.scss */
+.deck-container .slide.full-media img, .deck-container .slide.full-media video {
+  height: 100%;
+  left: 50%;
+  margin: -384px 0 0 -512px;
+  max-width: none;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: -10;
+}
+/* line 183, rawkes.scss */
+.deck-container .slide.full-icon {
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+/* line 186, rawkes.scss */
+.deck-container .slide.full-icon .icon {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  height: 400px;
+  margin: -200px 0 0 -200px;
+  top: 50%;
+  width: 400px;
+}
+/* line 193, rawkes.scss */
+.deck-container .slide.full-icon .icon.custom-width-620 {
+  height: 620px;
+  margin: -310px 0 0 -310px;
+  width: 620px;
+}
+/* line 200, rawkes.scss */
+.deck-container .slide.full-icon.blue {
+  background: #00bafb;
+}
+/* line 204, rawkes.scss */
+.deck-container .slide.full-icon.green {
+  background: #61cb42;
+}
+/* line 208, rawkes.scss */
+.deck-container .slide.full-icon.pink {
+  background: #ff0080;
+}
+/* line 212, rawkes.scss */
+.deck-container .slide.full-icon.orange {
+  background: #ffa52c;
+}
+/* line 218, rawkes.scss */
+.deck-container .slide.personal-info {
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+/* line 221, rawkes.scss */
+.deck-container .slide.personal-info header {
+  background: #00bafb;
+  margin: 60px 250px 0 -300px;
+  padding: 20px 132px 20px 460px;
+  position: relative;
+}
+/* line 227, rawkes.scss */
+.deck-container .slide.personal-info header h2 {
+  font-family: "TitilliumText Thin";
+  font-size: 64px;
+  margin: 0;
+  text-align: left;
+}
+/* line 234, rawkes.scss */
+.deck-container .slide.personal-info header p {
+  font-family: "TitilliumText Thin";
+  font-size: 26px;
+  margin: 0;
+  text-align: left;
+}
+/* line 241, rawkes.scss */
+.deck-container .slide.personal-info header .avatar {
+  border: 6px solid #3c99ce;
+  height: 80px;
+  margin: -46px 20px 0 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 80px;
+}
+/* line 252, rawkes.scss */
+.deck-container .slide.personal-info .recent-projects {
+  float: left;
+  width: 50%;
+}
+/* line 256, rawkes.scss */
+.deck-container .slide.personal-info .recent-projects h3 {
+  border: solid #b3b3b3;
+  border-width: 1px 0;
+  color: #b3b3b3;
+  font-family: "TitilliumText Regular";
+  font-size: 24px;
+  letter-spacing: 0;
+  padding: 10px 0 10px 98px;
+  margin: 0 0 40px 60px;
+  text-transform: uppercase;
+}
+/* line 268, rawkes.scss */
+.deck-container .slide.personal-info .recent-projects .project {
+  margin: 40px 20px 40px 60px;
+}
+/* line 273, rawkes.scss */
+.deck-container .slide.personal-info .more-cool-stuff {
+  float: right;
+  width: 50%;
+}
+/* line 277, rawkes.scss */
+.deck-container .slide.personal-info .more-cool-stuff h3 {
+  border: solid #b3b3b3;
+  border-width: 1px 0;
+  color: #b3b3b3;
+  font-family: "TitilliumText Regular";
+  font-size: 24px;
+  letter-spacing: 0;
+  padding: 10px 0 10px 118px;
+  margin: 0 60px 40px 0;
+  text-transform: uppercase;
+}
+/* line 289, rawkes.scss */
+.deck-container .slide.personal-info .more-cool-stuff .project {
+  margin: 40px 60px 40px 20px;
+}
+/* line 294, rawkes.scss */
+.deck-container .slide.personal-info .project {
+  margin: 40px 0;
+  padding: 0 0 0 98px;
+  position: relative;
+}
+/* line 299, rawkes.scss */
+.deck-container .slide.personal-info .project h4, .deck-container .slide.personal-info .project h5 {
+  letter-spacing: 0;
+  line-height: 1em;
+  font-family: "TitilliumText Light";
+}
+/* line 305, rawkes.scss */
+.deck-container .slide.personal-info .project h4 span, .deck-container .slide.personal-info .project h5 {
+  color: #b3b3b3;
+  font-family: "TitilliumText Thin";
+}
+/* line 310, rawkes.scss */
+.deck-container .slide.personal-info .project h4 {
+  font-size: 24px;
+}
+/* line 314, rawkes.scss */
+.deck-container .slide.personal-info .project h5 {
+  font-size: 20px;
+}
+/* line 318, rawkes.scss */
+.deck-container .slide.personal-info .project .icon {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  left: 34px;
+  position: absolute;
+  top: 50%;
+}
+/* line 324, rawkes.scss */
+.deck-container .slide.personal-info .project .icon.icon-twitter {
+  height: 41px;
+  margin: -20px 0 0 -30px;
+  width: 60px;
+}
+/* line 330, rawkes.scss */
+.deck-container .slide.personal-info .project .icon.icon-rawkets {
+  height: 66px;
+  margin: -33px 0 0 -20px;
+  width: 40px;
+}
+/* line 336, rawkes.scss */
+.deck-container .slide.personal-info .project .icon.icon-mozilla {
+  height: 49px;
+  margin: -25px 0 0 -30px;
+  width: 60px;
+}
+/* line 342, rawkes.scss */
+.deck-container .slide.personal-info .project .icon.icon-exw {
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  width: 60px;
+}
+/* line 350, rawkes.scss */
+.deck-container .slide.personal-info .banner {
+  margin: 80px 60px;
+}
+/* line 354, rawkes.scss */
+.deck-container .slide.personal-info .banner .project h3, .deck-container .slide.personal-info .banner .project h4 {
+  letter-spacing: -1px;
+  line-height: 0.8em;
+  font-family: "TitilliumText Light";
+}
+/* line 360, rawkes.scss */
+.deck-container .slide.personal-info .banner .project h3 span, .deck-container .slide.personal-info .banner .project h4 {
+  color: #b3b3b3;
+  font-family: "TitilliumText Thin";
+}
+/* line 365, rawkes.scss */
+.deck-container .slide.personal-info .banner .project h3 {
+  font-size: 48px;
+}
+/* line 369, rawkes.scss */
+.deck-container .slide.personal-info .banner .project h4 {
+  font-size: 48px;
+}
+/* line 373, rawkes.scss */
+.deck-container .slide.personal-info .banner .project .icon {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  height: 80px;
+  left: 0;
+  margin: -40px 0 0 0;
+  position: absolute;
+  top: 50%;
+  width: 68px;
+}

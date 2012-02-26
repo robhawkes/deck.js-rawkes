@@ -1,0 +1,52 @@
+.csstransitions.csstransforms {
+  overflow-x: hidden;
+}
+.csstransitions.csstransforms .deck-container > .slide {
+  -webkit-transition: left 500ms ease-in-out;
+  -moz-transition: left 500ms ease-in-out;
+  -ms-transition: left 500ms ease-in-out;
+  -o-transition: left 500ms ease-in-out;
+  transition: left 500ms ease-in-out;
+}
+.csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 48px;
+}
+.csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide .slide {
+  position: relative;
+  left: 0;
+  top: 0;
+  -webkit-transition: left 500ms ease-in-out, opacity 500ms ease-in-out;
+  -moz-transition: left 500ms ease-in-out, opacity 500ms ease-in-out;
+  -ms-transition: left 500ms ease-in-out, opacity 500ms ease-in-out;
+  -o-transition: left 500ms ease-in-out, opacity 500ms ease-in-out;
+  transition: left 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+.csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide .deck-next, .csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide .deck-after {
+  visibility: visible;
+  left: 200%;
+}
+.csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-previous {
+  left: -200%;
+}
+.csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-before {
+  left: -400%;
+}
+.csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-next {
+  left: 200%;
+}
+.csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-after {
+  left: 400%;
+}
+.csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-before .slide, .csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-previous .slide {
+  visibility: visible;
+}
+.csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-child-current {
+  left: 0;
+}
